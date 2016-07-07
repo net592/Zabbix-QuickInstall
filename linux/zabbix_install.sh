@@ -109,8 +109,8 @@ wget https://github.com/net592/Zabbix-QuickInstall/archive/gh-pages.zip
 
 unzip -o gh-pages.zip
 \cp -fr $zabbixdir/Zabbix-QuickInstall-gh-pages/linux/* /usr/local/zabbix/etc/
-chown zabbix:zabbix /usr/local/zabbix/etc/script/*
-chmod 744 /usr/local/zabbix/etc/script/*
+chown zabbix:zabbix /usr/local/zabbix/etc/scripts/*
+chmod 744 /usr/local/zabbix/etc/scripts/*
 
 echo "创建启动init"
 cp $zabbixdir/zabbix-${zabbix_version}/misc/init.d/tru64/zabbix_agentd /etc/init.d/
