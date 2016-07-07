@@ -1,5 +1,6 @@
 # Zabbix-QuickInstall
-关于Zabbix 快速安装文档
+Zabbix 快速安装文档
+请使用自动注册-匹配名称注册
 #linux 一键安装
 * 运行zabbix_install.sh 一键安装脚本两种运行方法
 1. ./zabbix_install.sh 参数Zabbix服务器IP 参数注册Agent名称
