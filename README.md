@@ -1,4 +1,5 @@
 # Zabbix-QuickInstall
+![mao](http://image.lxway.com/upload/c/90/c90ec90564a371aba08fb39d7bd96ff7_thumb.jpg) 
 Zabbix 快速安装文档
 请使用自动注册-匹配名称注册
 #linux 一键安装
