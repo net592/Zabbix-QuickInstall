@@ -1,5 +1,5 @@
 # Zabbix-QuickInstall
-![mahua](http://i1.51cto.com/images/201512/78d004301e0e39c3946006cfb2801304a76719.jpg)
+![mahua](http://lachlanmiskin.com/blog/wp-content/uploads/2014/07/zabbix_logo_500x131.png)
 
 Zabbix 快速安装文档
 请使用自动注册-匹配名称注册
