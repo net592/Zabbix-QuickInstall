@@ -8,8 +8,8 @@ Zabbix 快速安装文档
 1. ./zabbix_install.sh 参数Zabbix服务器IP 参数注册Agent名称
 2. ./zabbix_install.sh 运行
 ```
-curl -O https://raw.githubusercontent.com/net592/Zabbix-QuickInstall/gh-pages/linux/zabbix_install.sh;\
-chmod 744 zabbix_install.sh;\
+curl -O https://raw.githubusercontent.com/net592/Zabbix-QuickInstall/gh-pages/linux/zabbix_install.sh;
+chmod 744 zabbix_install.sh;
 ./zabbix_install.sh
 ############################################
                                              
