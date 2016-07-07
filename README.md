@@ -40,7 +40,7 @@ l@BEiU22F2F330KCFSK     iDM2CSSGF2F3FCMF;Z8@i
      UIJtJtJtJ1J1XF2EUqqFJ1JtJtJtJtc1XCK     
  欢迎使用Zabbix Agent Install 脚本V1.0 By Zeming
  Part 1:Setup envurment 
- 当前目录为:/root 本机ip为:10.22.2.52 安装版本:3.0.3
+ 当前目录为:/root 本机ip为:12.12.12.52 安装版本:3.0.3
  Please Zabbix-Server-IP: 1.2.3.4
  zabbix服务器ip为:1.2.3.4 
  Please Input zabbix-Agent-HostName: ZABBIX_HOSTNAME_AABB
