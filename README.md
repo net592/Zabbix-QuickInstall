@@ -4,12 +4,12 @@
 * 运行zabbix_install.sh 一键安装脚本两种运行方法
 1. ./zabbix_install.sh 参数Zabbix服务器IP 参数注册Agent名称
 2. ./zabbix_install.sh 运行
-'''
+```
 curl -O https://raw.githubusercontent.com/net592/Zabbix-QuickInstall/gh-pages/linux/zabbix_install.sh;\
 chmod 744 zabbix_install.sh;\
 ./zabbix_install.sh
-'''
-
+```
+```
  [root@test ~]# ./zabbix_install.sh 
                                              
                 :,;;iiiii;i;.:i..            
@@ -48,5 +48,5 @@ l@BEiU22F2F330KCFSK     iDM2CSSGF2F3FCMF;Z8@i
  Zabbix ServerIP:1.2.3.4 
  HostName:ZABBIX_HOSTNAME_AABB 
   Confirm to Start the Installation  (yes or no): y
-'''
+```
 #Windows 一键安装
