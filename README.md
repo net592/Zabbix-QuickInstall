@@ -51,5 +51,5 @@ l@BEiU22F2F330KCFSK     iDM2CSSGF2F3FCMF;Z8@i
 #Windows 一键安装
 * 点击安装根据提示操作（根据需要修改服务器IP和部署安装文件路径和共享）
 
-1.install_zabbix_3.0.bat  安装脚本
-2.unstall_zabbix_3.0.bat  卸载脚本
+1. install_zabbix_3.0.bat  安装脚本
+2. unstall_zabbix_3.0.bat  卸载脚本
