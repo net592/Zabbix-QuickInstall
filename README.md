@@ -8,9 +8,7 @@
 curl -O https://raw.githubusercontent.com/net592/Zabbix-QuickInstall/gh-pages/linux/zabbix_install.sh;\
 chmod 744 zabbix_install.sh;\
 ./zabbix_install.sh
-```
-```
- [root@test ~]# ./zabbix_install.sh 
+############################################
                                              
                 :,;;iiiii;i;.:i..            
              .,iii;i;;;;;;;i;ii;             
