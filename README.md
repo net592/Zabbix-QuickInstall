@@ -15,8 +15,8 @@ chmod 744 zabbix_install.sh;
 ./zabbix_install.sh
 ############# AWS&Linu CMD ##############
 curl -O https://raw.githubusercontent.com/net592/Zabbix-QuickInstall/gh-pages/linux/zabbix_install.sh;
-chmod 744 zabbix_install.sh;
-./zabbix_install.sh
+chmod 744 zabbix_aws_install.sh;
+./zabbix_aws_install.sh
 #机器名称获取EC2机器信息如： AgentName-local-ipv4-instance-id
 ############################################
                                              
