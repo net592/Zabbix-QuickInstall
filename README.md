@@ -9,15 +9,15 @@ Zabbix 快速安装文档
 2. ./zabbix_install.sh 运行
 
 ```
-############# Linx&Centos CMD ##############
+############# Linx&Centos发行版 CMD ##############
 curl -O https://raw.githubusercontent.com/net592/Zabbix-QuickInstall/gh-pages/linux/zabbix_install.sh;
 chmod 744 zabbix_install.sh;
 ./zabbix_install.sh
-############# AWS&Linu CMD ##############
+############# AWS亚马逊&Linux CMD ##############
 curl -O https://raw.githubusercontent.com/net592/Zabbix-QuickInstall/gh-pages/linux/zabbix_install.sh;
 chmod 744 zabbix_aws_install.sh;
 ./zabbix_aws_install.sh
-#机器名称获取EC2机器信息如： AgentName-local-ipv4-instance-id
+#机器名称会追加获取EC2机器信息： InputAgentName-local-ipv4-instance-id
 ############################################
 ```
 ![mahua](images/linux_setup.png)
