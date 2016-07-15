@@ -26,3 +26,6 @@ chmod 744 zabbix_aws_install.sh;
 
 1. install_zabbix_3.0.bat  安装脚本
 2. unstall_zabbix_3.0.bat  卸载脚本
+
+#Template 一些模版
+* 后续整理
