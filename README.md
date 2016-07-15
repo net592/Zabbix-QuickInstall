@@ -22,7 +22,7 @@ chmod 744 zabbix_aws_install.sh;
 ```
 ![mahua](images/linux_setup.png)
 #Windows 一键安装
-* 点击安装根据提示操作（根据需要修改服务器IP和部署安装文件路径和共享）
+* 点击安装根据提示操作（请根据需要修改服务器IP和部署安装文件路径和使用WIN共享下载）
 
 1. install_zabbix_3.0.bat  安装脚本
 2. unstall_zabbix_3.0.bat  卸载脚本
