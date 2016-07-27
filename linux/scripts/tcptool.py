@@ -5,7 +5,7 @@ import MySQLdb
 #将要监控的web站点url添加到urllist列表
 
 try:
-    conn = MySQLdb.connect(host='10.129.9.121',user='root',passwd='nji9NJI(',db='saltoneops',charset="utf8")
+    conn = MySQLdb.connect(host='10.129.9.121',user='root',passwd='123456',db='saltoneops',charset="utf8")
     cursor = conn.cursor()
     #cursor.execute("SELECT t2.`name`, CONCAT(t4.ip_add,':',t1.port), t1.`code`, t1.enabled From opsapp_apps t1 INNER JOIN opsapp_appname t2 on  t2.id = t1.name_id INNER JOIN opsapp_apps_ip_add t3 on t1.id = t3.apps_id INNER JOIN opsapp_serverip t4 on t4.id = t3.serverip_id INNER JOIN opsapp_appgroup t5 on t5.id = t1.group_id WHERE t1.type = 'WebSite';")
     cursor.execute("SELECT t2.name, t2.type, t4.ip_add, t1.port, t1.code, t1.app_path, t1.enabled From opsapp_apps t1 INNER JOIN opsapp_appname t2 on  t2.id = t1.name_id INNER JOIN opsapp_apps_ip_add t3 on t1.id = t3.apps_id INNER JOIN opsapp_serverip t4 on t4.id = t3.serverip_id WHERE t2.type='Component';")
@@ -17,8 +17,8 @@ def web_site_discovery():
     web_list=[]
     web_dict={"data":None}
     for r in results:
-            if r[4] is 0:
-               break
+            if r[6] is 0:
+               continue
             url_dict={}
             url_dict["{#NAME}"]=r[0]
             url_dict["{#IP}"]=r[2]
