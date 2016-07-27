@@ -7,8 +7,7 @@ import MySQLdb
 try:
     conn = MySQLdb.connect(host='10.129.9.121',user='root',passwd='nji9NJI(',db='saltoneops',charset="utf8")
     cursor = conn.cursor()
-    #cursor.execute("SELECT t2.`name`, CONCAT(t4.ip_add,':',t1.port), t1.`code`, t1.enabled From opsapp_apps t1 INNER JOIN opsapp_appname t2 on  t2.id = t1.name_id INNER JOIN opsapp_apps_ip_add t3 on t1.id = t3.apps_id INNER JOIN opsapp_serverip t4 on t4.id = t3.serverip_id INNER JOIN opsapp_appgroup t5 on t5.id = t1.group_id WHERE t1.type = 'WebSite';")
-    cursor.execute("SELECT t2.name, t2.type, t4.ip_add, t1.port, t1.code, t1.app_path, t1.enabled From opsapp_apps t1 INNER JOIN opsapp_appname t2 on  t2.id = t1.name_id INNER JOIN opsapp_apps_ip_add t3 on t1.id = t3.apps_id INNER JOIN opsapp_serverip t4 on t4.id = t3.serverip_id WHERE t2.type='Component';")
+    cursor.execute("SELECT t2.name, t2.type, CONCAT(t4.ip_add,':',t1.port), t1.code, t1.app_path, t1.enabled From opsapp_apps t1 INNER JOIN opsapp_appname t2 on  t2.id = t1.name_id INNER JOIN opsapp_apps_ip_add t3 on t1.id = t3.apps_id INNER JOIN opsapp_serverip t4 on t4.id = t3.serverip_id WHERE t2.type='WebSite';")
     results = cursor.fetchall()
 except MySQLdb.Error,e:
     print "Mysql Error %d: %s" % (e.args[0], e.args[1])
@@ -17,12 +16,12 @@ def web_site_discovery():
     web_list=[]
     web_dict={"data":None}
     for r in results:
-            if r[4] is 0:
+            if r[3] is 0:
                break
             url_dict={}
-            url_dict["{#NAME}"]=r[0]
+            url_dict["{#SITENAME}"]=r[0]
             url_dict["{#IP}"]=r[2]
-            url_dict["{#PORT}"]=r[3]
+            url_dict["{#CODE}"]=r[3]
             web_list.append(url_dict)
     web_dict["data"]=web_list
     jsonStr = json.dumps(web_dict, sort_keys=True, indent=4)
@@ -39,7 +38,7 @@ def web_site_code():
 
 if __name__ == "__main__":
   try:
-    if sys.argv[1] == "tcp_discovery":
+    if sys.argv[1] == "web_site_discovery":
         print web_site_discovery()
     elif sys.argv[1] == "web_site_code":
         print web_site_code()
