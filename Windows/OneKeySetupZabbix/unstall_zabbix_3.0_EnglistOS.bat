@@ -18,4 +18,5 @@ if /i "%zt%"=="RUNNING" (
 ) else (
     echo uninstall zabbix
 )
+del C:\opstools\zabbix30  /f/s/q/a
 pause>nul

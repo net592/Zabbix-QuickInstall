@@ -18,4 +18,5 @@ if /i "%zt%"=="RUNNING" (
 ) else (
     echo 卸载成功,Zabbix服务现在已停止状态。
 )
+del C:\opstools\zabbix30  /f/s/q/a
 pause>nul
