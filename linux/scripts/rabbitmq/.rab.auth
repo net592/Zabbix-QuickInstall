@@ -1,0 +1,3 @@
+USERNAME=guest
+PASSWORD=BsOps@@RBMQ2016
+CONF=/usr/local/zabbix/etc/zabbix_agentd.conf
