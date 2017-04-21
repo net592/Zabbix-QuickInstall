@@ -108,10 +108,10 @@ sed -i "s/# HostMetadataItem=/HostMetadataItem=system.uname/g" /usr/local/zabbix
 sed -i "s/# Include=$/Include=\/usr\/local\/zabbix\/etc\/zabbix_agentd.conf.d\/*.conf/g" /usr/local/zabbix/etc/zabbix_agentd.conf 
 echo -ne "\033[32m Down GitHUB Config \033[0m"
 cd $zabbixdir
-wget https://github.com/net592/Zabbix-QuickInstall/archive/gh-pages.zip
+wget https://github.com/net592/Zabbix-QuickInstall/archive/master.zip
 
-unzip -o gh-pages.zip
-\cp -fr $zabbixdir/Zabbix-QuickInstall-gh-pages/linux/* /usr/local/zabbix/etc/
+unzip -o master.zip
+\cp -fr $zabbixdir/Zabbix-QuickInstall-master/linux/* /usr/local/zabbix/etc/
 chown zabbix:zabbix /usr/local/zabbix/etc/scripts/*
 chmod 744 /usr/local/zabbix/etc/scripts/*
 
