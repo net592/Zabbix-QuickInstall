@@ -30,3 +30,4 @@ chmod 744 zabbix_aws_install.sh;
 
 #Template 一些模版
 * 后续整理
+* DnsPod
