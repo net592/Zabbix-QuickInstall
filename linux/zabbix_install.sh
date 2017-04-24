@@ -110,6 +110,7 @@ cd $zabbixdir
 wget https://github.com/net592/Zabbix-QuickInstall/archive/master.zip
 
 unzip -o master.zip
+\cp -fr $zabbixdir/Zabbix-QuickInstall-master/linux/* /usr/local/zabbix/etc/
 chown zabbix:zabbix /usr/local/zabbix/etc/scripts/*
 chmod 744 /usr/local/zabbix/etc/scripts/*
 
