@@ -35,7 +35,7 @@ sleep 1
 echo -e "\033[42;37m Part 1:Setup envurment \033[0m"
 
 zabbixdir=`pwd`
-zabbix_version=3.0.3
+zabbix_version=3.2.5
 ip=`ip addr |grep inet |egrep -v "inet6|127.0.0.1" |awk '{print $2}' |awk -F "/" '{print $1}'`
 
 EC2LOCALIPV4=`curl -s http://169.254.169.254/latest/meta-data/local-ipv4`
@@ -80,7 +80,8 @@ sleep 2
 
 if [ ! -f "$zabbixdir/zabbix-${zabbix_version}.tar.gz" ]; then
    #wget http://netix.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/$zabbix_version/zabbix-${zabbix_version}.tar.gz
-   wget http://120.52.73.48/jaist.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/$zabbix_version/zabbix-${zabbix_version}.tar.gz
+   #wget --no-check-certificate https://jaist.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/$zabbix_version/zabbix-${zabbix_version}.tar.gz
+   wget http://omwdjgaw1.bkt.clouddn.com/zabbix/zabbix-${zabbix_version}.tar.gz
    #wget http://tenet.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/$zabbix_version/zabbix-${zabbix_version}.tar.gz
    #wget http://$ServerIP/zabbix/zabbix-${zabbix_version}.tar.gz
 else
