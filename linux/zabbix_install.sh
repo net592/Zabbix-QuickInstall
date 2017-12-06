@@ -102,6 +102,7 @@ echo "配置zabbix server ip为 $ServerIP"
 echo "配置zabbix HostName ip为 $HostName"
 sed -i "s/Hostname=Zabbix server/Hostname=$HostName/g" /usr/local/zabbix/etc/zabbix_agentd.conf #设置主机名
 sed -i "s/Server=127.0.0.1/Server=$ServerIP/g" /usr/local/zabbix/etc/zabbix_agentd.conf #设置Server地址
+sed -i "s/# AllowRoot=0/AllowRoot=1/g" /usr/local/zabbix/etc/zabbix_agentd.conf #开启root权限
 sed -i "s/ServerActive=127.0.0.1/ServerActive=$ServerIP/g" /usr/local/zabbix/etc/zabbix_agentd.conf  #设置Active服务器地址
 sed -i "s/# EnableRemoteCommands=0/EnableRemoteCommands=1/g" /usr/local/zabbix/etc/zabbix_agentd.conf #设置启用远程命令功能
 sed -i "s/# HostMetadataItem=/HostMetadataItem=system.uname/g" /usr/local/zabbix/etc/zabbix_agentd.conf #设置HostMetadataItem
