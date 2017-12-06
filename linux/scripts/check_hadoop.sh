@@ -1,5 +1,5 @@
 #!/bin/bash 
-#scripts for tcp status By Zeming
+#scripts for hadoop status By Zeming
 function namenode { 
 NUM=$(su - hadoop -c "/usr/local/java/bin/jps |grep -i namenode|wc -l")
 if [[ $NUM -eq 1 ]];then
@@ -15,7 +15,8 @@ NUM=$(su - hadoop -c "/usr/local/java/bin/jps |grep -i datanode|wc -l")
 if [[ $NUM -eq 1 ]];then
 echo "$NUM"
 else
-echo "$NUM" 
+echo "$NUM"
+(su - hadoop -c "/usr/local/hadoop/sbin/hadoop-daemon.sh start datanode") 
 fi
 #/usr/sbin/ss -ant | awk '{++s[$1]} END {for(k in s) print k,s[k]}' | grep 'SYN-RECV' | awk '{print $2}'
 }
@@ -25,6 +26,7 @@ if [[ $NUM -eq 1 ]];then
 echo "$NUM"
 else
 echo "$NUM" 
+(su - hadoop -c "/usr/local/hadoop/sbin/yarn-daemon.sh start resourcemanager") 
 fi
 #/usr/sbin/ss -ant | awk '{++s[$1]} END {for(k in s) print k,s[k]}' | grep 'SYN-RECV' | awk '{print $2}'
 }
@@ -34,6 +36,7 @@ if [[ $NUM -eq 1 ]];then
 echo "$NUM"
 else
 echo "$NUM" 
+(su - hadoop -c "/usr/local/hadoop/sbin/yarn-daemon.sh start resourcemanager")
 fi
 #/usr/sbin/ss -ant | awk '{++s[$1]} END {for(k in s) print k,s[k]}' | grep 'SYN-RECV' | awk '{print $2}'
 }
@@ -43,6 +46,7 @@ if [[ $NUM -eq 1 ]];then
 echo "$NUM"
 else
 echo "$NUM" 
+(su - hadoop -c "/usr/local/hbase/bin/hbase-daemon.sh start master")
 fi
 #/usr/sbin/ss -ant | awk '{++s[$1]} END {for(k in s) print k,s[k]}' | grep 'SYN-RECV' | awk '{print $2}'
 }
@@ -51,7 +55,8 @@ NUM=$(su - hadoop -c "/usr/local/java/bin/jps |grep -i regionserver|wc -l")
 if [[ $NUM -eq 1 ]];then
 echo "$NUM"
 else
-echo "$NUM" 
+echo "$NUM"
+(su - hadoop -c "/usr/local/hbase/bin/hbase-daemon.sh start regionserver") 
 fi
 #/usr/sbin/ss -ant | awk '{++s[$1]} END {for(k in s) print k,s[k]}' | grep 'SYN-RECV' | awk '{print $2}'
 }
